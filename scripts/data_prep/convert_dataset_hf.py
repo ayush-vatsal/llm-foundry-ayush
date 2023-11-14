@@ -195,7 +195,7 @@ tinyconstants.splits['train'] = DataSplitConstants(hf_split='train',
                                                  raw_samples=420000,
                                                  truncated_samples=None)
 tinyconstants.splits['val'] = DataSplitConstants(hf_split='validation',
-                                                 folder_split='validation',
+                                                 folder_split='val',
                                                  raw_samples=22000,
                                                  truncated_samples=None)
 
