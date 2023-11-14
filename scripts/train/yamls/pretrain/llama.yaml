@@ -3,7 +3,7 @@
 
 data_local: ./alpha-copy
 data_remote: # If blank, files must be present in data_local
-# tokenizer_name: EleutherAI/gpt-neox-20b
+tokenizer_name: NousResearch/Llama-2-7b-hf
 max_seq_len: 4096
 global_seed: 17
 
@@ -41,7 +41,7 @@ model:
 
 # Tokenizer
 tokenizer:
-  name: NousResearch/Llama-2-7b-hf
+  name: ${tokenizer_name}
   kwargs:
     model_max_length: ${max_seq_len}
 
