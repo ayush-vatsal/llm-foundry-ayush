@@ -195,7 +195,7 @@ tinyconstants.splits['train'] = DataSplitConstants(hf_split='train',
                                                  raw_samples=420000,
                                                  truncated_samples=None)
 
-CONSTS = {'c4': c4constants, 'the_pile': pileconstants, 'nampdn-ai/tiny-textbooks': tinyconstants}
+CONSTS = {'c4': c4constants, 'the_pile': pileconstants, 'roneneldan/TinyStories': tinyconstants}
 
 
 def build_hf_dataset(
