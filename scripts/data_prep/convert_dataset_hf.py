@@ -192,11 +192,11 @@ tinyconstants = DatasetConstants(
 )
 tinyconstants.splits['train'] = DataSplitConstants(hf_split='train',
                                                  folder_split='train',
-                                                 raw_samples=420000,
+                                                 raw_samples=42000,
                                                  truncated_samples=None)
 tinyconstants.splits['val'] = DataSplitConstants(hf_split='validation',
                                                  folder_split='val',
-                                                 raw_samples=22000,
+                                                 raw_samples=2200,
                                                  truncated_samples=None)
 
 CONSTS = {'c4': c4constants, 'the_pile': pileconstants, 'roneneldan/TinyStories': tinyconstants}
