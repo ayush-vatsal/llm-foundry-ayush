@@ -186,8 +186,16 @@ c4constants.splits['val_xsmall'] = DataSplitConstants(hf_split='validation',
                                                       folder_split='val_xsmall',
                                                       raw_samples=3000,
                                                       truncated_samples=3000)
+tinyconstants = DatasetConstants(
+    chars_per_sample=2163,  # Computed over validation set
+    chars_per_token=4  # OpenAI estimate
+)
+tinyconstants.splits['train'] = DataSplitConstants(hf_split='train',
+                                                 folder_split='train',
+                                                 raw_samples=420000,
+                                                 truncated_samples=None)
 
-CONSTS = {'c4': c4constants, 'the_pile': pileconstants}
+CONSTS = {'c4': c4constants, 'the_pile': pileconstants, 'nampdn-ai/tiny-textbooks': tinyconstants}
 
 
 def build_hf_dataset(
