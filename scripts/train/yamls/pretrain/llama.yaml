@@ -41,7 +41,7 @@ model:
 
 # Tokenizer
 tokenizer:
-  name: EleutherAI/gpt-neox-20b
+  name: NousResearch/Llama-2-7b-hf
   kwargs:
     model_max_length: ${max_seq_len}
 
