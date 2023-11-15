@@ -3,7 +3,7 @@
 
 data_local: ./alpha-copy
 data_remote: # If blank, files must be present in data_local
-tokenizer_name: NousResearch/Llama-2-7b-hf
+tokenizer_name: meta-llama/Llama-2-7b-hf
 max_seq_len: 2048
 global_seed: 17
 
@@ -13,7 +13,7 @@ run_name: # If left blank, will be read from env var $RUN_NAME
 # Model
 model:
   name: hf_causal_lm
-  pretrained_model_name_or_path: NousResearch/Llama-2-7b-hf
+  pretrained_model_name_or_path: meta-llama/Llama-2-7b-hf
   config_overrides:
     # n_positions: ${max_seq_len}
     vocab_size: 32000
