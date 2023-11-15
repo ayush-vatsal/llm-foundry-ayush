@@ -80,7 +80,7 @@ scheduler:
 
 optimizer:
   name: decoupled_adamw
-  lr: 3.0e-4
+  lr: 1.0e-4
   betas:
   - 0.9
   - 0.95
@@ -96,12 +96,12 @@ max_duration: 33696ba # ~ 17.55B tokens; 150 tokens / param
 eval_interval: 1000ba
 eval_first: false
 eval_subset_num_batches: -1
-global_train_batch_size: 8
+global_train_batch_size: 16
 
 # System
 seed: ${global_seed}
 device_eval_batch_size: 1
-device_train_microbatch_size: 1
+device_train_microbatch_size: 2
 # device_train_microbatch_size: auto
 precision: amp_bf16
 
