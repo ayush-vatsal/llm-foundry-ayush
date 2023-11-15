@@ -84,8 +84,8 @@ optimizer:
   betas:
   - 0.9
   - 0.95
-  eps: 3.0e-05
-  weight_decay: 0.0
+  eps: 1.0e-8
+  weight_decay: 1.0e-4
 
 algorithms:
   gradient_clipping:
@@ -96,7 +96,7 @@ max_duration: 33696ba # ~ 17.55B tokens; 150 tokens / param
 eval_interval: 1000ba
 eval_first: false
 eval_subset_num_batches: -1
-global_train_batch_size: 16
+global_train_batch_size: 1000
 
 # System
 seed: ${global_seed}
@@ -131,8 +131,8 @@ loggers:
   wandb: {}
 
 # Checkpoint to local filesystem or remote object store
-save_interval: 10ba
-save_num_checkpoints_to_keep: 1  # Important, this cleans up checkpoints saved to DISK
+save_interval: 100ba
+save_num_checkpoints_to_keep: 3  # Important, this cleans up checkpoints saved to DISK
 # save_folder: ./{run_name}/checkpoints
 save_folder: s3://agi-model/{run_name}/checkpoints
 
