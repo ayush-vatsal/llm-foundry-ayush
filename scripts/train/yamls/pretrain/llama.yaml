@@ -33,7 +33,7 @@ model:
     pretraining_tp: 1
     tie_word_embeddings: False
     rope_theta: 10000.0
-    rope_scaling: None
+    # rope_scaling: None
     attention_bias: False
     # WARNING: if setting `pretrained: true`, `max_position_embeddings` must match the
     # `max_position_embeddings` used during pre-training
