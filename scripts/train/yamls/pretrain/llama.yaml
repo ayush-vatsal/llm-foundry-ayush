@@ -14,6 +14,7 @@ run_name: # If left blank, will be read from env var $RUN_NAME
 model:
   name: hf_causal_lm
   pretrained_model_name_or_path: meta-llama/Llama-2-7b-hf
+  use_auth_token: True
   config_overrides:
     # n_positions: ${max_seq_len}
     vocab_size: 32000
@@ -35,7 +36,6 @@ model:
     rope_theta: 10000.0
     # rope_scaling: None
     attention_bias: False
-    use_auth_token: True
 
     # WARNING: if setting `pretrained: true`, `max_position_embeddings` must match the
     # `max_position_embeddings` used during pre-training
