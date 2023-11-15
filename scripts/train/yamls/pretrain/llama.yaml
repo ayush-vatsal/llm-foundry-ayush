@@ -127,8 +127,8 @@ callbacks:
   memory_monitor: {}
   runtime_estimator: {}
 
-loggers:
-  wandb: {}
+# loggers:
+#   wandb: {}
 
 # Checkpoint to local filesystem or remote object store
 # save_interval: 500ba
