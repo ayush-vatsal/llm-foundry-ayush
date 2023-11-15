@@ -15,7 +15,7 @@ model:
   name: hf_causal_lm
   pretrained_model_name_or_path: NousResearch/Llama-2-7b-hf
   config_overrides:
-    n_positions: ${max_seq_len}
+    # n_positions: ${max_seq_len}
     vocab_size: 32000
     hidden_size: 2048
     intermediate_size: 8192
