@@ -133,8 +133,8 @@ loggers:
 # Checkpoint to local filesystem or remote object store
 save_interval: 10ba
 save_num_checkpoints_to_keep: 1  # Important, this cleans up checkpoints saved to DISK
-# save_folder: ./{run_name}/checkpoints
-save_folder: s3://agi-model/{run_name}/checkpoints
+save_folder: ./{run_name}/checkpoints
+# save_folder: s3://agi-model/{run_name}/checkpoints
 
 # Load from local filesystem or remote object store
 # load_path: ./gpt-125m/checkpoints/latest-rank{rank}.pt
