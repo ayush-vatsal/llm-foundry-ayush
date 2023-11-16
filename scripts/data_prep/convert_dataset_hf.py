@@ -198,8 +198,16 @@ tinyconstants.splits['val'] = DataSplitConstants(hf_split='validation',
                                                  folder_split='val',
                                                  raw_samples=22000,
                                                  truncated_samples=None)
+pythonconstants.splits['train'] = DataSplitConstants(hf_split='train',
+                                                 folder_split='train',
+                                                 raw_samples=2000000,
+                                                 truncated_samples=None)
+pythonconstants.splits['train'] = DataSplitConstants(hf_split='train',
+                                                 folder_split='val',
+                                                 raw_samples=20000,
+                                                 truncated_samples=None)
 
-CONSTS = {'c4': c4constants, 'the_pile': pileconstants, 'roneneldan/TinyStories': tinyconstants}
+CONSTS = {'c4': c4constants, 'the_pile': pileconstants, 'roneneldan/TinyStories': tinyconstants, 'local_python': pythonconstants}
 
 
 def build_hf_dataset(
