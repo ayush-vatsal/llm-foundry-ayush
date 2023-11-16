@@ -242,7 +242,7 @@ def build_hf_dataset(
     Returns:
         An IterableDataset.
     """
-    hf_dataset = hf_datasets.load_from_disk(dataset_path=dataset_name)
+    hf_dataset = hf_datasets.load_from_disk(dataset_path="s3://test-foundation-model/data-v2/Final_Dataset_30B/final_python/")
     if mode == ConcatMode.NO_CONCAT:
         dataset = NoConcatDataset(hf_dataset)
     else:
