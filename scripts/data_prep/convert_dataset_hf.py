@@ -242,7 +242,7 @@ def build_hf_dataset(
     Returns:
         An IterableDataset.
     """
-    hf_dataset = hf_datasets.load_dataset(path=dataset_name,
+    hf_dataset = hf_datasets.load_from_disk(path=dataset_name,
                                           name=data_subset,
                                           split=split,
                                           streaming=True)
