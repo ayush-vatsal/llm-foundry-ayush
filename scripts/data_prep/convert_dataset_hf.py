@@ -242,10 +242,7 @@ def build_hf_dataset(
     Returns:
         An IterableDataset.
     """
-    hf_dataset = hf_datasets.load_from_disk(dataset_path=dataset_name,
-                                          name=data_subset,
-                                          split=split,
-                                          streaming=True)
+    hf_dataset = hf_datasets.load_from_disk(dataset_path=dataset_name)
     if mode == ConcatMode.NO_CONCAT:
         dataset = NoConcatDataset(hf_dataset)
     else:
