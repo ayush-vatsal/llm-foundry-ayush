@@ -17,7 +17,7 @@ model:
   use_auth_token: True
   config_overrides:
     # n_positions: ${max_seq_len}
-    vocab_size: 50257
+    vocab_size: 50277
     hidden_size: 2048
     intermediate_size: 8192
     num_hidden_layers: 24
