@@ -198,6 +198,10 @@ tinyconstants.splits['val'] = DataSplitConstants(hf_split='validation',
                                                  folder_split='val',
                                                  raw_samples=22000,
                                                  truncated_samples=None)
+pythonconstants = DatasetConstants(
+    chars_per_sample=2163,  # Computed over validation set
+    chars_per_token=4  # OpenAI estimate
+)
 pythonconstants.splits['train'] = DataSplitConstants(hf_split='train',
                                                  folder_split='train',
                                                  raw_samples=2000000,
