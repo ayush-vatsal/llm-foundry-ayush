@@ -3,7 +3,7 @@
 
 data_local: ./alpha-copy
 data_remote: # If blank, files must be present in data_local
-tokenizer_name: EleutherAI/gpt-neox-20b
+tokenizer_name: meta-llama/Llama-2-7b-hf
 max_seq_len: 2048
 global_seed: 17
 
@@ -17,7 +17,7 @@ model:
   use_auth_token: True
   config_overrides:
     # n_positions: ${max_seq_len}
-    vocab_size: 50277
+    vocab_size: 32000
     hidden_size: 2048
     intermediate_size: 8192
     num_hidden_layers: 24
@@ -26,7 +26,7 @@ model:
     hidden_act: "silu"
     max_position_embeddings: 2048
     initializer_range: 0.02
-    rms_norm_eps: 1e-6
+    rms_norm_eps: 1.0e-6
     use_cache: True
     pad_token_id: 1
     bos_token_id: 0
