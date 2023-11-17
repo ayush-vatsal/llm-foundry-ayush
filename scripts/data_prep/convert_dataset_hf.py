@@ -356,6 +356,8 @@ def generate_samples(
             if truncate_num_samples is not None and n_samples == truncate_num_samples:
                 return
             n_samples += 1
+            if n_samples % 1000 == 0:
+                print(n_samples)
             yield {k: v[idx] for k, v in batch.items()}
 
 
