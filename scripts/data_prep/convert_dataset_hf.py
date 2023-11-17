@@ -211,7 +211,20 @@ pythonconstants.splits['train'] = DataSplitConstants(hf_split='train',
                                                  raw_samples=20000,
                                                  truncated_samples=None)
 
-CONSTS = {'c4': c4constants, 'the_pile': pileconstants, 'roneneldan/TinyStories': tinyconstants, 'local_python': pythonconstants}
+pajamaconstants = DatasetConstants(
+    chars_per_sample=2163,  # Computed over validation set
+    chars_per_token=4  # OpenAI estimate
+)
+pajamaconstants.splits['train'] = DataSplitConstants(hf_split='train',
+                                                 folder_split='train',
+                                                 raw_samples=800000,
+                                                 truncated_samples=None)
+pajamaconstants.splits['train'] = DataSplitConstants(hf_split='train',
+                                                 folder_split='val',
+                                                 raw_samples=50000,
+                                                 truncated_samples=None)
+
+CONSTS = {'c4': c4constants, 'the_pile': pileconstants, 'roneneldan/TinyStories': tinyconstants, 'local_python': pythonconstants, 'local_redpajama': pajamaconstants}
 
 
 def build_hf_dataset(
