@@ -206,7 +206,7 @@ pythonconstants.splits['train'] = DataSplitConstants(hf_split='train',
                                                  folder_split='train',
                                                  raw_samples=2000000,
                                                  truncated_samples=None)
-pythonconstants.splits['train'] = DataSplitConstants(hf_split='train',
+pythonconstants.splits['val'] = DataSplitConstants(hf_split='train',
                                                  folder_split='val',
                                                  raw_samples=20000,
                                                  truncated_samples=None)
@@ -219,7 +219,7 @@ pajamaconstants.splits['train'] = DataSplitConstants(hf_split='train',
                                                  folder_split='train',
                                                  raw_samples=800000,
                                                  truncated_samples=None)
-pajamaconstants.splits['train'] = DataSplitConstants(hf_split='train',
+pajamaconstants.splits['val'] = DataSplitConstants(hf_split='train',
                                                  folder_split='val',
                                                  raw_samples=50000,
                                                  truncated_samples=None)
