@@ -110,7 +110,7 @@ class TrainSmallConstants(DataSplitConstants):
                  hf_split: str = 'train',
                  folder_split: str = 'train_small',
                  raw_samples: int = 1000000,
-                 truncated_samples: int = 100000):
+                 truncated_samples: int = 800000):
         super().__init__(hf_split, folder_split, raw_samples, truncated_samples)
 
 
@@ -120,7 +120,7 @@ class ValSmallConstants(DataSplitConstants):
                  hf_split: str = 'validation',
                  folder_split: str = 'val_small',
                  raw_samples: int = 10000,
-                 truncated_samples: int = 10000):
+                 truncated_samples: int = 50000):
         super().__init__(hf_split, folder_split, raw_samples, truncated_samples)
 
 
