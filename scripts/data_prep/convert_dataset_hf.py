@@ -217,14 +217,14 @@ pajamaconstants = DatasetConstants(
 )
 pajamaconstants.splits['train'] = DataSplitConstants(hf_split='train',
                                                  folder_split='train',
-                                                 raw_samples=800000,
-                                                 truncated_samples=700000)
+                                                 raw_samples=900000,
+                                                 truncated_samples=None)
 pajamaconstants.splits['val'] = DataSplitConstants(hf_split='train',
                                                  folder_split='val',
-                                                 raw_samples=50000,
-                                                 truncated_samples=40000)
+                                                 raw_samples=30000,
+                                                 truncated_samples=None)
 
-CONSTS = {'c4': c4constants, 'the_pile': pileconstants, 'roneneldan/TinyStories': tinyconstants, 'local_python': pythonconstants, 'local_redpajama': pajamaconstants}
+CONSTS = {'c4': c4constants, 'the_pile': pileconstants, 'roneneldan/TinyStories': tinyconstants, 'local_python': pythonconstants, 'redpajama_local': pajamaconstants}
 
 
 def build_hf_dataset(
