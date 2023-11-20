@@ -257,6 +257,7 @@ def build_hf_dataset(
         An IterableDataset.
     """
     hf_dataset = hf_datasets.load_from_disk(dataset_path=dataset_name)
+    hf_dataset = hf_dataset.shuffle(seed=42)
     if split == "train":
         hf_dataset = hf_dataset.select(
             range(
