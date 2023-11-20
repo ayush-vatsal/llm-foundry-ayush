@@ -218,11 +218,11 @@ pajamaconstants = DatasetConstants(
 pajamaconstants.splits['train'] = DataSplitConstants(hf_split='train',
                                                  folder_split='train',
                                                  raw_samples=900000,
-                                                 truncated_samples=None)
+                                                 truncated_samples=900000)
 pajamaconstants.splits['val'] = DataSplitConstants(hf_split='train',
                                                  folder_split='val',
                                                  raw_samples=30000,
-                                                 truncated_samples=None)
+                                                 truncated_samples=30000)
 
 CONSTS = {'c4': c4constants, 'the_pile': pileconstants, 'roneneldan/TinyStories': tinyconstants, 'local_python': pythonconstants, 'redpajama_local': pajamaconstants}
 
