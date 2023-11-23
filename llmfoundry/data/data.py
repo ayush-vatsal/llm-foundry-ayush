@@ -103,7 +103,7 @@ class ConcatTokensDataset(IterableDataset):
 
         buffer = []
         for sample in self.hf_dataset:
-            encoded = self.tokenizer(sample['content'],
+            encoded = self.tokenizer(sample['text'],
                                      truncation=False,
                                      padding=False)
             iids = encoded['input_ids']
