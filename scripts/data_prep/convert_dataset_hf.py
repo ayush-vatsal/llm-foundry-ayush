@@ -270,22 +270,6 @@ def build_hf_dataset(
         An IterableDataset.
     """
     hf_dataset = hf_datasets.load_from_disk(dataset_path=dataset_name)
-    hf_dataset = hf_dataset.shuffle(seed=42)
-    if split == "train":
-        hf_dataset = hf_dataset.select(
-            range(
-                0,
-                int(train_size*len(hf_dataset))
-            )
-        )
-    elif split == "val":
-        val_size = 1 - train_size
-        hf_dataset = hf_dataset.select( 
-            range(
-                int(train_size*len(hf_dataset)), 
-                len(hf_dataset) 
-            ) 
-        )
     if mode == ConcatMode.NO_CONCAT:
         dataset = NoConcatDataset(hf_dataset)
     else:
