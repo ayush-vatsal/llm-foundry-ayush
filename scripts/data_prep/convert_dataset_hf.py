@@ -242,8 +242,8 @@ CONSTS = {'c4': c4constants, 'the_pile': pileconstants, 'roneneldan/TinyStories'
 
 def build_hf_dataset(
     dataset_name: str,
-    split: str,
     mode: ConcatMode,
+    split: str = None,
     max_length: Optional[int] = None,
     bos_text: str = '',
     eos_text: str = '',
@@ -270,6 +270,8 @@ def build_hf_dataset(
         An IterableDataset.
     """
     hf_dataset = hf_datasets.load_from_disk(dataset_path=dataset_name)
+    if split:
+        hf_dataset = hf_dataset[split]
     if mode == ConcatMode.NO_CONCAT:
         dataset = NoConcatDataset(hf_dataset)
     else:
