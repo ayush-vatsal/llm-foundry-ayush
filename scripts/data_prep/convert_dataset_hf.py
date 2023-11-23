@@ -226,7 +226,7 @@ pajamaconstants.splits['val'] = DataSplitConstants(hf_split='train',
 fin_30bconstants = DatasetConstants(
     chars_per_sample=5163,  # Computed over validation set
     chars_per_token=4  # OpenAI estimate
-    
+)
 fin_30bconstants.splits['train'] = DataSplitConstants(hf_split='train',
                                                  folder_split='train',
                                                  raw_samples=30851000,
