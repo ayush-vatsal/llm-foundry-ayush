@@ -192,7 +192,20 @@ c4constants.splits['val_xxsmall'] = DataSplitConstants(
     raw_samples=100,
     truncated_samples=100)
 
-CONSTS = {'c4': c4constants, 'the_pile': pileconstants}
+pajamaconstants = DatasetConstants(
+    chars_per_sample=2163,  # Computed over validation set
+    chars_per_token=4  # OpenAI estimate
+)
+pajamaconstants.splits['train'] = DataSplitConstants(hf_split='train',
+                                                 folder_split='train',
+                                                 raw_samples=900000,
+                                                 truncated_samples=900000)
+pajamaconstants.splits['val'] = DataSplitConstants(hf_split='train',
+                                                 folder_split='val',
+                                                 raw_samples=30000,
+                                                 truncated_samples=30000)
+
+CONSTS = {'c4': c4constants, 'the_pile': pileconstants, 'togethercomputer/RedPajama-Data-1T-Sample': pajamaconstants}
 
 
 def build_hf_dataset(
